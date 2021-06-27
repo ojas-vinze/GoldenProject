@@ -33,7 +33,7 @@ class Player{
     static getPlayerInfo(){
         var playerInfoRef=database.ref('Players');
         playerInfoRef.on("value",(data)=>{
-            allPlayers=date.val()
+            allPlayers=data.val()
         })
     }
 }
