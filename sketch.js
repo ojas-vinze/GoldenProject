@@ -1,12 +1,12 @@
 var playerCount=0;
 var allPlayers;
 var gameState=0;
-var arrowimg,bowimg,backimg,balloon1img,ballon2img,ballon3img,ballon4img;
+var arrowimg,bowimg,backimg,balloon1img,balloon2img,balloon3img,balloon4img;
 var player1,player2;
-var players=[];
+var players;
 var bg1img,bg2img;
-var arrow;
-var arrowg;
+var arrow,balloon;
+var arrowg,balloong;
 var game,player,form;
 var database;
 
@@ -26,11 +26,14 @@ function setup(){
     createCanvas(1000,600);
     database=firebase.database();
     arrowg = new Group();
+    balloong = new Group();
     game = new Game();
     game.getState();
     game.start();
 }
 
 function draw(){
-
+    if(playerCount===2){
+        game.play();
+    }
 }
