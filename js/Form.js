@@ -9,7 +9,7 @@ class Form{
 
     display(){
         this.title.html("Welcome to the ballon buster game!!!");
-        this.title.position(350,50);
+        this.title.position(250,90);
         this.title.style("color","blue");
 
         this.input.position(width/2,height/2);
