@@ -3,7 +3,7 @@ class Form{
         this.input=createInput("Name");
         this.button=createButton("Play");
         this.greeting=createElement("h2");
-        this.reset=createButton("Reset");
+        // this.reset=createButton("Reset");
         this.title=createElement("h1");
     }
 
@@ -20,6 +20,7 @@ class Form{
             this.button.hide()
 
             playerCount++;
+            player.index = playerCount;
             player.updateCount(playerCount);
             player.name=this.input.value();
             player.update();
@@ -29,14 +30,14 @@ class Form{
             }
         })
 
-        this.reset.position(550,20);
+        // this.reset.position(550,20);
 
         this.greeting.position(250,190);
 
-        this.reset.mousePressed(()=>{
-            player.updateCount(0);
-            game.update(0);
-        })
+        // this.reset.mousePressed(()=>{
+        //     player.updateCount(0);
+        //     game.update(0);
+        // })
     }
 
     hide(){
